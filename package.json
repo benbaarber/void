@@ -1,0 +1,55 @@
+{
+  "name": "void",
+  "displayName": "{VOID}",
+  "description": "Spinoff of Abyss color theme",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "{VOID}",
+        "uiTheme": "vs-dark",
+        "path": "./themes/{VOID}-color-theme.json"
+      }
+    ],
+    "semanticTokenTypes": [
+      {
+        "id": "exception",
+        "superType": "keyword",
+        "description": "Exception-handling keywords"
+      }
+    ],
+    "semanticTokenScopes": [
+      {
+        "language": "python",
+        "scopes": {
+          "exception": ["keyword.control.flow.exception"]
+        }
+      }
+    ],
+    "grammars": [
+      { 
+        "path": "./syntaxes/injection.json",
+        "scopeName": "exception.injection",
+        "injectionSelector": "L:keyword.control.flow",
+        "patterns": [
+          {
+            "include": "#kw-exception"
+          }
+        ],
+        "repository": {
+          "kw-exception": {
+            "name": "keyword.control.flow.exception",
+            "match": ["try", "except", "finally", "raise"]
+          }
+        },
+        "injectTo": ["source.python"]
+      }
+    ]
+  }
+}
