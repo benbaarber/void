@@ -1,6 +1,6 @@
 {
   "name": "void",
-  "displayName": "{VOID}",
+  "displayName": "void",
   "description": "Spinoff of Abyss color theme",
   "version": "0.0.1",
   "engines": {
@@ -12,9 +12,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "{VOID}",
+        "label": "void",
         "uiTheme": "vs-dark",
-        "path": "./themes/{VOID}-color-theme.json"
+        "path": "./themes/void-color-theme.json"
       }
     ],
     "semanticTokenTypes": [
